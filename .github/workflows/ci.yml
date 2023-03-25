@@ -19,4 +19,4 @@ jobs:
     steps:
       #- run: .\target\release\deps\cli_run-9d7ba1f91571a373.exe rust
       - run: |
-          Get-ChildItem Env: | Out-File -FilePath "env_variables_ci.txt"
+          Get-ChildItem Env: | ForEach-Object { "$($_.Name): $($_.Value)" } | Out-File -FilePath "env_variables_ci.txt"
