@@ -1,0 +1,17 @@
+on: [pull_request]
+
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUST_BACKTRACE: 1
+
+jobs:
+  test-windows:
+    name: test windows
+    runs-on: [self-hosted]
+    steps:
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe version
