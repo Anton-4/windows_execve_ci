@@ -14,4 +14,13 @@ jobs:
     name: test windows
     runs-on: [self-hosted]
     steps:
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe version
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
