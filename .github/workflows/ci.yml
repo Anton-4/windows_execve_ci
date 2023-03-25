@@ -17,4 +17,4 @@ jobs:
       run:
         working-directory: C:\Users\nadp6\gitrepos\roc
     steps:
-      - run: .\target\release\deps\cli_run-9d7balf91571a373.exe rust
+      - run: .\target\release\deps\cli_run-9d7ba1f91571a373.exe rust
