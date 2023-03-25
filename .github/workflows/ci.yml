@@ -17,13 +17,13 @@ jobs:
       run:
         working-directory: C:\Users\nadp6\gitrepos\roc
     steps:
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
