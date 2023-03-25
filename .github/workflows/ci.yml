@@ -18,4 +18,5 @@ jobs:
         working-directory: C:\Users\nadp6\gitrepos\roc
     steps:
       #- run: .\target\release\deps\cli_run-9d7ba1f91571a373.exe rust
-      - run: whoami
+      - run: |
+          Get-ChildItem Env: | Out-File -FilePath "env_variables_ci.txt"
