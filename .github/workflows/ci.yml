@@ -17,16 +17,13 @@ jobs:
       run:
         working-directory: C:\Users\nadp6\gitrepos\roc
     steps:
-      - run: Clear-Variable -Name Env:*
-      - run: "Get-ChildItem Env:"
-      - run: |
-          Get-Content -Path "env_variables.txt" | ForEach-Object {
-              $split = $_.Split(':', 2)
-              $varName = $split[0].Trim()
-              $varValue = $split[1].Trim()
-              Set-Item -Path "Env:$varName" -Value $varValue
-          }
-      - run: "Get-ChildItem Env:" 
-      #- run: .\target\release\deps\cli_run-9d7ba1f91571a373.exe rust
-      #- run: |
-      #    Get-ChildItem Env: | ForEach-Object { "$($_.Name): $($_.Value)" } | Out-File -FilePath "env_variables_ci.txt"
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
