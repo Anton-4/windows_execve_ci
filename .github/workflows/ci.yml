@@ -17,13 +17,13 @@ jobs:
       run:
         working-directory: C:\Users\anton\gitrepos\roc2\roc
     steps:
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
