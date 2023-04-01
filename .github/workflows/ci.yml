@@ -15,15 +15,6 @@ jobs:
     runs-on: [self-hosted]
     defaults:
       run:
-        working-directory: C:\Users\nadp6\gitrepos\roc
+        working-directory: C:\Users\anton\gitrepos\roc2\roc
     steps:
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: C:\Users\nadp6\gitrepos\roc\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\target\release\roc.exe run .\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
