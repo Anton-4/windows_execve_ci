@@ -1,4 +1,4 @@
-use std::ffi::CString;
+use std::ffi::{CString, OsStr};
 use std::os::raw::c_char;
 use std::ptr;
 
@@ -13,7 +13,7 @@ fn main() {
         ptr::null::<c_char>(),
     ];
 
-    let env_vars = [
+    /*let env_vars = [
         "=::=::\\",
         "ALLUSERSPROFILE=C:\\ProgramData",
         "APPDATA=C:\\Users\\anton\\AppData\\Roaming",
@@ -55,8 +55,25 @@ fn main() {
         "USERPROFILE=C:\\Users\\anton",
         "VBOX_MSI_INSTALL_PATH=C:\\Program Files\\Oracle\\VirtualBox\\",
         "windir=C:\\Windows",
-    ];
-    let mut env_vars_c_vec: Vec<CString> = Vec::new();
+    ];*/
+    
+    let arena = Bump::new();
+    let mut buffer = Vec::with_capacity(100);
+
+    let env_vars_c_vec: bumpalo::collections::Vec<CString> = std::env::vars_os()
+        .map(|(k, v)| {
+            buffer.clear();
+
+            use std::io::Write;
+            buffer.write_all(os_str_as_utf8_bytes(&k)).unwrap();
+            buffer.write_all(b"=").unwrap();
+            buffer.write_all(os_str_as_utf8_bytes(&v)).unwrap();
+
+            CString::new(buffer.as_slice()).unwrap()
+        })
+        .collect_in(&arena);
+
+    /*let mut env_vars_c_vec: Vec<CString> = Vec::new();
 
     for s in env_vars.iter() {
         match CString::new(*s) {
@@ -65,9 +82,7 @@ fn main() {
                 eprintln!("Error converting &str to CString: {:?}", e);
             }
         }
-    }
-
-    let arena = Bump::new();
+    }*/
 
     let envp: bumpalo::collections::Vec<*const c_char> = env_vars_c_vec
             .iter()
@@ -82,4 +97,8 @@ fn main() {
             envp.as_ptr(),
         );
     }
+}
+
+fn os_str_as_utf8_bytes(os_str: &OsStr) -> &[u8] {
+    os_str.to_str().unwrap().as_bytes()
 }
