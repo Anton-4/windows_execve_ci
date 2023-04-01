@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      #- run: cargo run --release
-      - run: curl.exe -L --output "C:\hello-exec.exe" --url https://www.dropbox.com/s/99vcjkls77r0vrq/hello-exec.exe?dl=1
+      - run: cargo run --release
+      #- run: curl.exe -L --output "C:\hello-exec.exe" --url https://www.dropbox.com/s/99vcjkls77r0vrq/hello-exec.exe?dl=1
       
-      - run: C:\hello-exec.exe
+      #- run: C:\hello-exec.exe
