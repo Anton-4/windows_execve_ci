@@ -1,0 +1,29 @@
+on: [pull_request]
+
+name: CI
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUST_BACKTRACE: 1
+
+jobs:
+  test-windows:
+    name: test windows
+    runs-on: [self-hosted]
+    defaults:
+      run:
+        working-directory: C:\Users\anton\gitrepos\roc2\roc
+    steps:
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
+      - run: C:\Users\anton\Desktop\roc_app_binary.exe
