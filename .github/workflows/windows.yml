@@ -20,13 +20,13 @@ jobs:
     timeout-minutes: 150
     steps:
 
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\release\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
