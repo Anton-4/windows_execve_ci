@@ -30,3 +30,7 @@ jobs:
       - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
       - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
       - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
+      - name: Run on failure
+        if: ${{ failure() }}
+        run: |
+          $Error[0]
