@@ -33,4 +33,4 @@ jobs:
       - name: Run on failure
         if: ${{ failure() }}
         run: |
-          $Error[0]
+          echo $Error[0]
