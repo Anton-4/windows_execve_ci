@@ -20,17 +20,13 @@ jobs:
     timeout-minutes: 150
     steps:
 
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - run: .\roc\target\debug\roc.exe run .\roc\examples\platform-switching\rocLovesRust.roc --prebuilt-platform=true
-      - name: Run on failure
-        if: ${{ failure() }}
-        run: |
-          echo $Error[0]
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
