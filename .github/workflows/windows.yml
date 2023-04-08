@@ -1,0 +1,32 @@
+on: [pull_request]
+
+name: windows - subset of tests
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUST_BACKTRACE: 1
+
+jobs:
+  windows-tests:
+    name: windows-tests
+    runs-on: [self-hosted]
+    defaults:
+      run:
+        working-directory: C:\Users\anton\gitrepos\execve\roc
+
+    timeout-minutes: 150
+    steps:
+
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
+      - run: cargo test --release -p roc_cli cli_run::platform_switching_rust
